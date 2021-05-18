@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team Page</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="{{ url_for('static',filename='css/team.css') }}" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark" >
+        <div class="container" >
+            <a class="navbar-brand" href="#" style="font-size:40px" font-family: 'Goblin One', cursive;>Malaria Detection Web App</a>
+        </div>
+        <ul style="; 
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration:none;
+    color:whiite;
+    text-transform: uppercase; ">
+        <button style="display: inline-block;border-radius:10px;padding: 12px 30px;background: black;color: white;font-size: 1em;transition: all .4s;cursor: pointer;"<li style=""><a style="color:white;" href="{{ url_for('team') }}">Introduction</a></li></button>
+		<button style="display: inline-block;border-radius:10px;padding: 12px 30px;background: black;color: white;font-size: 1em;transition: all .4s;cursor: pointer;"<li><a style="color:white;" href="{{ url_for('index') }}">Home</a></li></button>
+		</ul>
+    </nav>
+    <div class="container">
+        <div id="content" style="margin-top:2em">{% block content %}{% endblock %}</div>
+    </div>
+
+    <section id="team" class="pb-5">
+    <div class="container">
+        <h5 style="color:green">This Web App is about Detection for Malaria Disease using the blood samples provided by the user. Model predicts the image and display the result</h5>
+        <h5 class="section-title h1">OUR TEAM</h5>
+        <div class="row">
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" >
+                    <div class="mainflip flip-0">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <h4 class="card-title">Kokkera Ganesh Kumar</h4>
+                                    <p class="card-text">Team Leader</p>
+                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Kokkera Ganesh Kumar</h4>
+                                    <p class="card-text">CSE(4th year) <br> Vel Tech Rangarajan Dr.Sagunthala R&D Institute of Science and Technology</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.facebook.com/profile.php?id=100009226434137">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.instagram.com/im_g.a.n.i/">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://join.skype.com/invite/yNjRi9X0Lmw6">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png" alt="card image"></p>
+                                    <h4 class="card-title">Repakula Varun</h4>
+                                    <p class="card-text">Team member</p>
+                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Repakula Varun</h4>
+                                    <p class="card-text"> CSE(4th year) <br> Vel Tech Rangarajan Dr.Sagunthala R&D Institute of Science and Technology.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.facebook.com/profile.php?id=100005431304961">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.instagram.com/varun_bunny_09/?igshid=15r322vsb2t17">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_03.png" alt="card image"></p>
+                                    <h4 class="card-title">Anugu Kanishk Reddy</h4>
+                                    <p class="card-text">Team member</p>
+                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Anugu Kanishk Reddy</h4>
+                                    <p class="card-text">CSE(4th year) <br> Vel Tech Rangarajan Dr.Sagunthala R&D Institute of Science and Technology.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.facebook.com/santosh.santu.796569">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.instagram.com/kanishq_66/?igshid=ywl786t617wg">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://join.skype.com/invite/Wt7JjaiBi6Xz">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+</body>
+</html>

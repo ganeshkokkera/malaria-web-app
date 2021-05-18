@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Malaria web app</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href={{url_for('static',filename='css/styles.css')}} rel="stylesheet" />
+        <link href={{url_for('static',filename='css/team.css')}} rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Malaria Detection web app</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('team') }}">Predict</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container d-flex h-100 align-items-center">
+                <div class="mx-auto text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">Malaria Disease Detection</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Malaria Detection using deep learing with web app</h2>
+                    <a class="btn btn-primary js-scroll-trigger" href="#about">Get Started</a>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-white mb-4">About our Project</h2>
+                        <p class="text-white-50">
+                            Malaria is a rapidly spreading and life-threatening disease infected through the mosquito into the blood. In short, nearly half the world’s population is at risk from malaria and there are over 200 million malaria cases and approximately 400,000 deaths due to malaria every year. Malaria Virus damages the oxygen carrying RBC cells . The standard way of treatment to malaria is by visually examining blood via microscope for parasite-infected red blood cells. This method is time consuming and inefficient. This diagnosis depend on the experience of the examiner. Automatic image recognition is previously implemented to malaria blood smears for treatment before. Coming to practical this model gave less accuracy. This give us to study more on image recognition technology for malaria detection. Our aim of the project is build a model that predict the malaria with best accuracy . we trained the dataset with CNN algorithm. Model is trained by the collection of microscopic images of blood smears collected from the various people. t is classified as uninfected and infected with early and effective testing using CNN algorithm and also perform classification on the infected cells using Deep Learning .
+
+                        </p>
+                    </div>
+                </div>
+                <img class="img-fluid" src="static/assets/img/d1.jpg" alt="..." />
+            </div>
+        </section>
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container">
+                <!-- Featured Project Row-->
+                <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="static/assets/img/d3.jpg" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Malaria Disease</h4>
+                            <p class="text-black-50 mb-0">Malaria is caused by mosquito's and it is mostly found in the tropical regeions like Africa and India.Every year 400million people are getting infected from this virus. In olden days malaria is identified by the skillfull people, who are well trained to identify the malaria cell present in the blood semer by counting the RBC cells present for 1000 paratisized cells. Malaria virus destroys RBC cells which leads to death.</p>
+                            <a href="https://www.who.int/news-room/fact-sheets/detail/malaria">Refre Here</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" src="static/assets/img/cnn.png" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">CNN Algorithm</h4>
+                                    <p class="mb-0 text-white-50">The image is read by the computer using RGB channels, each of which has its own set of pixel values. If an image has p rows, q columns, and n channels, it is called a A*B*C image. CNN stands for convolutional neural network. This algorithm is based on deep learning. The visual cortex in the brain inspires the interactions of neurons in a CNN, which is a form of feed forward artificial neural network. The visual cortex is a tiny portion of the brain that is responsible for vision.</p>
+                                    <a href="https://www.geeksforgeeks.org/introduction-convolution-neural-network/">Refre Here</a>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row justify-content-center no-gutters">
+                    <div class="col-lg-6"><img class="img-fluid" src="static/assets/img/c19.jpg" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">Covid-19 Alert</h4>
+                                    <p class="mb-0 text-white-50">Please wear mask and sanitize your hands for every one hour. Please maintain social distancing.</p>
+                                    <a href="https://covid19.who.int/">Refre Here</a>
+                                    <hr class="d-none d-lg-block mb-0 mr-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Signup-->
+        <section class="signup-section" id="signup">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                        <h2 class="text-white mb-5">Hope you like our website! Please Visit again </h2>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact-->
+        <section class="contact-section bg-black">
+            <div class="container">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase" style="color:white">Our Amazing Team</h2>
+                </div>
+                <div class="row">
+                     <div class="col-lg-4">
+                        <div class="team-member">
+                            <div class="p-5"><img class="img-fluid rounded-circle" src="static/images/gg.jpg" alt="..." /></div>
+                            <h2 style="color:white" >Ganesh Kumar</h2>
+                            <h4 style="color:#39D2B4">Team Leader</h4>
+                            <p class="text-muted">CSE(4th year) <br> Vel Tech Rangarajan Dr.Sagunthala R&D Institute of Science and Technology.</p>
+                            <a class=" mx-2" href="https://www.instagram.com/im_g.a.n.i/"><i class="fab fa-instagram"></i></a>
+                            <a class="mx-2" href="https://www.facebook.com/profile.php?id=100009226434137"><i class="fab fa-facebook-f"></i></a>
+                            <a class=" mx-2" href="https://join.skype.com/invite/yNjRi9X0Lmw6"><i class="fab fa-skype"></i></a>
+                        </div>
+                    </div>
+                     <div class="col-lg-4">
+                        <div class="team-member">
+                            <div class="p-5"><img class="img-fluid rounded-circle" src="static/images/varun.jpeg" alt="..." /></div>
+                            <h2 style="color:white">Repakula Varun</h2>
+                            <h4 style="color:#39D2B4">Team member</h4>
+                            <p class="text-muted">CSE(4th year) <br> Vel Tech Rangarajan Dr.Sagunthala R&D Institute of Science and Technology.</p>
+                            <a class=" mx-2" href="https://www.instagram.com/varun_bunny_09/?igshid=15r322vsb2t17"><i class="fab fa-instagram"></i></a>
+                            <a class=" mx-2" href="https://www.facebook.com/profile.php?id=100005431304961"><i class="fab fa-facebook-f"></i></a>
+                            <a class=" mx-2" href="https://join.skype.com/invite/yVWVcgqprjnZ"><i class="fab fa-skype"></i></a>
+                        </div>
+                    </div>
+                     <div class="col-lg-4">
+                        <div class="team-member">
+                            <div class="p-5"><img class="img-fluid rounded-circle" src="static/images/kanishk.jpeg" alt="..." /></div>
+                            <h2 style="color:white">Kanishk Reddy</h2>
+                            <h4 style="color:#39D2B4">Team member</h4>
+                            <p class="text-muted">CSE(4th year) <br> Vel Tech Rangarajan Dr.Sagunthala R&D Institute of Science and Technology.</p>
+                            <a class=" mx-2" href="https://www.instagram.com/kanishq_66/?igshid=ywl786t617wg"><i class="fab fa-instagram"></i></a>
+                            <a class=" mx-2" href="https://www.facebook.com/santosh.santu.796569"><i class="fab fa-facebook-f"></i></a>
+                            <a class=" mx-2" href="https://join.skype.com/invite/Wt7JjaiBi6Xz"><i class="fab fa-skype"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container">Copyright &copy; Malaria web app LLC 2021</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <!-- Core theme JS-->
+        <script src={{url_for('static',filename='js/scripts.js')}}></script>
+        <script src={{url_for('static',filename='js/main.js')}}></script>
+    </body>
+</html>
