@@ -1,4 +1,4 @@
-﻿from __future__ import division, print_function
+from __future__ import division, print_function
 from logging import debug
 # coding=utf-8
 import sys
@@ -21,27 +21,31 @@ from gevent.pywsgi import WSGIServer
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
-MODEL_PATH = 'C:/Users/gansh/Desktop/malaria-detection-master/basic_cnn.h5'
+MODEL_PATH = 'models/my_model.h5'
 
 #Load your trained model
-model = load_model(MODEL_PATH)
-          # Necessary to make everything ready to run on the GPU ahead of time
+model = load_model(MODEL_PATH)         # Necessary to make everything ready to run on the GPU ahead of time
 print('Model loaded. Start serving...')
 
 # You can also use pretrained model from Keras
 # Check https://keras.io/applications/
 #from keras.applications.resnet50 import ResNet50
 #model = ResNet50(weights='imagenet')
-print('Model loaded. Check http://127.0.0.1:5000/')
+#print('Model loaded. Check http://127.0.0.1:5000/')
 
 
 def model_predict(img_path, model):
-    img = image.load_img(img_path, target_size=(125, 125))
-    x=image.img_to_array(img)
-    x=np.expand_dims(x, axis=0)
-    images = np.vstack([x])
-    pred = model.predict(images, batch_size=16)
+    img = image.load_img(img_path, target_size=(50,50)) #target_size must agree with what the trained model expects!!
+
+    # Preprocessing the image
+    img = image.img_to_array(img)
+    img = np.expand_dims(img, axis=0)
+
+   
+    preds = model.predict(img)
+    pred = np.argmax(preds,axis = 1)
     return pred
+
 
 @app.route('/', methods=['GET'])
 def index():
@@ -54,7 +58,7 @@ def team():
     return render_template('base.html')
 
 
-@app.route('/predict', methods=['GET','POST'])
+@app.route('/predict', methods=['GET', 'POST'])
 def upload():
     if request.method == 'POST':
         # Get the file from post request
@@ -72,9 +76,9 @@ def upload():
 
         # Arrange the correct return according to the model. 
 		# In this model 1 is Pneumonia and 0 is Normal.
-        str2 = 'Malaria Parasitized'
-        str1 = 'Normal'
-        if pred[0] <= 0:
+        str1 = 'Malaria Parasitized'
+        str2 = 'Normal'
+        if pred[0] == 0:
             return str1
         else:
             return str2
@@ -82,7 +86,7 @@ def upload():
 
     #this section is used by gunicorn to serve the app on Heroku
 if __name__ == '__main__':
-        app.run(debug=False)
+        app.run()
     #uncomment this section to serve the app locally with gevent at:  http://localhost:5000
     # Serve the app with gevent 
     #http_server = WSGIServer(('', 5000), app)
