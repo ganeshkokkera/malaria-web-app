@@ -1,4 +1,4 @@
-# flask/gunicorn based Heroku web app for malaria detection
+# flask/web app for malaria detection
 
 [![](https://img.shields.io/badge/python-2.7%2C%203.5%2B-green.svg)]()
 
